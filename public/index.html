@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Source Viewer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <h1>Web Page Source Viewer</h1>
+            <p class="subtitle">View formatted source code of any web page</p>
+        </header>
+        
+        <main class="main">
+            <div id="home-view" class="view">
+                <div class="url-form">
+                    <div class="input-group">
+                        <input type="url" 
+                               id="url-input" 
+                               placeholder="Enter URL to view source (e.g., https://example.com)"
+                               autocomplete="url">
+                        <button type="button" id="submit-btn">View Source</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="source-view" class="view hidden">
+                <div class="toolbar">
+                    <button type="button" id="back-btn" class="back-button">← Back</button>
+                    <div class="source-info">
+                        <span id="source-url" class="source-url"></span>
+                        <span id="source-meta" class="source-meta"></span>
+                    </div>
+                </div>
+                
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Fetching source code...</p>
+                </div>
+                
+                <div class="error-message" id="error-message">
+                    <h3>Error</h3>
+                    <p id="error-text"></p>
+                    <button type="button" id="retry-btn">Try Again</button>
+                </div>
+                
+                <div class="source-container" id="source-container">
+                    <pre><code id="source-code" class="language-markup"></code></pre>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

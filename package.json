@@ -1,0 +1,30 @@
+{
+  "name": "web-page-preview",
+  "version": "1.0.0",
+  "description": "Single page application for viewing formatted source code of web pages",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "nodemon server/app.js",
+    "build": "echo 'No build step needed for vanilla JS'",
+    "test": "echo 'No tests yet'"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "node-fetch": "^3.3.2",
+    "prismjs": "^1.29.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "keywords": [
+    "web",
+    "preview",
+    "source-code",
+    "spa"
+  ],
+  "author": "",
+  "license": "MIT"
+}
